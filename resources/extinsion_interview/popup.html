@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Cabin:wght@600&family=Dancing+Script:wght@500&family=Great+Vibes&family=Sacramento&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>My Extension</title>
+  <style>
+    body {
+      /* background-image: url("gmeetbg.jpg");
+      background-size: 180% 70%;
+      opacity: 70%; */
+      background-repeat: no-repeat;
+      background: linear-gradient(90deg, #390354, #100835);
+      width: 400px;
+      height: 800px;
+      margin: 0px !important;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .question {
+      background: linear-gradient(270deg, #450082, #390354);
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      border: 1px solid #ffffff;
+      margin: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* .startButton, .endButton, .finishButton {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    }
+    
+    .startButton:hover, .endButton:hover, .finishButton:hover {
+    background-color: #005f8c;
+    } */
+
+    .extName h4 {
+      /* display: flex;
+    align-items: center;
+    justify-content: center; */
+      background-color: #450082;
+      height: 40px;
+      max-width: 100%;
+      margin: 0px !important;
+      color: white;
+    }
+
+    h4 {
+      font-size: 15px;
+      font-family: 'Hind Siliguri', sans-serif;
+      /* font-weight: bold;  */
+      /* text-align: center; */
+
+      padding-top: 20px;
+      padding-left: 20px;
+
+    }
+
+    .ext {
+      border-radius: 20px;
+    }
+
+    /* 
+    .circle{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    }
+    .circle img{
+    width: 100px;
+    height: 100px;
+    object-fit: none;
+    } */
+    button {
+      align-items: center;
+      appearance: none;
+      background-color: #9013FE;
+      border-radius: 24px;
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+      box-sizing: border-box;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      fill: currentcolor;
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 48px;
+      justify-content: center;
+      letter-spacing: .25px;
+      line-height: normal;
+      max-width: 100%;
+      overflow: visible;
+      padding: 2px 24px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+      will-change: transform, opacity;
+      z-index: 0;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #F6F9FE;
+      color: #174ea6;
+    }
+
+    button:active {
+      box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+      outline: none;
+    }
+
+    button:focus {
+      outline: none;
+      border: 2px solid #4285f4;
+    }
+
+    button:not(:disabled) {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+    button:not(:disabled):hover {
+      box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+    }
+
+    button:not(:disabled):focus {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+    button:not(:disabled):active {
+      box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+    }
+
+    button:disabled {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+    /* CSS */
+    .button1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .img-bot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .arrBtn {
+      height: 30px;
+      width: 30px;
+      background-color: #9013FE;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      color: white;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+    }
+
+    .arrBtn:hover {
+      color: #ffffff;
+      background-color: #c800ff;
+    }
+
+    .parent {
+      display: flex;
+      justify-content: center;
+    }
+
+    .iris-container {
+      height: 300px;
+      width: 350px;
+      background-color: #c89aff;
+      background-image: linear-gradient(225deg, #c89aff 0%, #f4e3ff 50%, #eeb0ff 100%);
+
+      margin: auto 0;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 5px;
+    }
+
+    .eye-class {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+    }
+
+    .det-container {
+      display: flex;
+      justify-content: center;
+      font-family: 'Cabin', sans-serif;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+
+
+<body>
+
+  <div class="extName hidden">
+    <h4>Google Meet Extension</h4>
+  </div>
+
+  <!-- <div
+      style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center;">
+      <img src="bot.gif" alt="Chat Bot Image"
+        style="width: 130px; height: 130px; object-fit: contain; border-radius: 50%; margin-top: 70px; margin-left: 90px;">
+    </div> -->
+  <div class="img-bot hidden">
+    <img src="bot.gif" alt="Chat Bot Image" style="width: 130px; height: 130px;">
+  </div>
+
+
+  <div class="question hidden"></div>
+  <div class="duration hidden"></div>
+  <div class="button1 hidden"><button class="startButton" style="display: none;">Start</button></div>
+  <div class="button1 hiddem"><button class="endButton" style="display: none;">Next Question</button></div>
+  <div class="button1 hidden"><button class="finishButton" style="display: none;">Finish</button></div>
+  <div class="button1 hidden"><button class="results" style="display: none;">View Results</button><br>
+    <p id="result" class="hidden"></p>
+  </div>
+  <div class="button1 hidden"><button class="review_acc" style="display:none;">Give Feedback</button></div>
+  <div class="button1 hidden"><button class="review_dec" style="display:none;">Skip</button></div>
+  <div class="button1 hidden"><button class="next" style="display:none;">Submit</button></div>
+
+  <div class="parent hidden">
+    <div class="iris-container">
+      <div class="eye-class hidden">
+        <img src="eye1.gif" alt="Chat Bot Image" style=" width: 130px; height: 130px;">
+      </div>
+      <div style="color:#390354">
+        <div class="det-container">
+          <p id="detection"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <i class="material-icons arrBtn" id="modify-iframe"><span class="material-symbols-outlined">
+      swap_horiz
+    </span></i>
+  <script src="popup.js"></script>
+</body>
+
+</html>

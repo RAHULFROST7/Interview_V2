@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <title>Results</title>
+  <script src="popup.js"></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      color: white;
+      overflow: auto;
+    }
+.content
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#resultTable {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 80%;
+  height: 400px; /* or any other value you prefer */
+  overflow: auto;
+  margin-bottom: 30px;
+}
+
+#resultTable::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+#resultTable {
+  scrollbar-width: none;
+}
+
+    #resultTable th,
+    #resultTable td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    #resultTable th {
+      background: linear-gradient(270deg, #450082, #390354);
+      color: #fbfbfb;
+    }
+
+    #resultTable tr {
+      background: linear-gradient(270deg, #450082, #390354);
+    }
+
+    #resultTable tr:hover {
+      background-color: #9700fc;
+    }
+    .arrBtn
+  {
+    height: 30px;
+    width: 30px;
+    background-color: #9013FE;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    left:8px;
+    cursor: pointer;
+  }
+  .arrBtn:hover
+  {
+   color: #ffffff;
+   background-color: #c800ff;
+  }
+  
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <table id="resultTable"></table>
+  </div>
+  <i class="material-icons arrBtn" id="reload-button"><span class="material-symbols-outlined">
+    cached
+    </span></i>
+</body>
+
+</html>
